@@ -1,0 +1,56 @@
+body {
+    background: #333;
+}
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+    background: #4c4c4c;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.crono{
+    background-color: #242424;
+    width: 212px;
+    height: 212px;
+    border-radius: 50%;
+    border: 7px solid #3a3a3a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.spinner{
+    border-radius: 50%;
+    width: 92%;
+    height: 92%;
+}
+
+@keyframes llenarCircunferencia {
+    0% {
+      border-radius: 50% 50% 50% 50%;
+    }
+    100% {
+      border-radius: 0 0 50% 50%;
+    }
+  }
+  
+  .spiner {
+    width: 100px;
+    height: 100px;
+    border: 3px solid blue;
+    animation: llenarCircunferencia 2s linear infinite;
+  }
+  

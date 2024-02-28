@@ -52,7 +52,48 @@ body {
     stroke-dashoffset: 2000;
     transform: rotate(-90deg);
     transform-origin: center;
-    animation: stroke 6s linear infinite ;
-    animation-delay: 0s;
+    animation: stroke 6s ease-out infinite ;
   }
   
+  .container{
+    position: absolute;
+}
+
+.estadisticas{
+    position: absolute;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    font-size: 15px;
+}
+
+h1{
+    font-size: 45px;
+}
+
+.icon{
+    color: #f85b5b;
+    width: 12px;
+    height: 12px;
+    animation: heart 1s ease-out infinite ;
+}
+
+@keyframes heart {
+    0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.3);
+      }
+      100% {
+        transform: scale(1);
+      }
+}
+
+
+p,h1{
+    margin: 0;
+}

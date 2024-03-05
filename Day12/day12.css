@@ -83,7 +83,7 @@ article::before {
   .info {
     box-sizing: border-box;
     position: absolute;
-    bottom: 53px;
+    bottom: 46px;
     left: -85px;
     display: block;
     background: #286F8A;
@@ -95,6 +95,7 @@ article::before {
     opacity: 0;
     transform: translate3d(0, -20px, 0);
     transition: all .5s ease-out;
+
   }
   
   .info:before {
@@ -119,28 +120,15 @@ article::before {
   }
   
   .pronounce {
-    display: block;
     background: #fff;
     color: #286F8A;
     padding: 8px 17px 10px 17px;
     line-height: 16px;
+    display: flex;
+    align-items: center;
   }
-  
-  .pronounce .fa {
-    position: relative;
-    margin-left: 10px;
-    top: 1px;
-    cursor: pointer;
-    transition: all .2s ease-out;
-  }
-  
-  .pronounce .fa:hover {
-    transform: scale(1.15) translate3d(0, 0, 0);
-    backface-visibility: none;
-  }
-  
+
   .text {
     display: block;
     padding: 13px 17px;
   }
-  

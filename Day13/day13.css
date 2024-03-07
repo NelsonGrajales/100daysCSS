@@ -58,18 +58,22 @@ body {
 @keyframes zoom {
     0%{
         transform: scale(2);
+        opacity: 0;
     }
     100%{
         transform: scale(1);
+        opacity: 1;
     }
 }
 
 @keyframes quitar {
     0%{
         transform: scale(1);
+        opacity: 1;
     }
     100%{
         transform: scale(2);
+        opacity: 0;
     }
 }
 
@@ -82,7 +86,7 @@ body {
     animation: zoom 0.3s ease-in;
 }
 
-.contenedor span:hover .img{
+.contenedor div:hover .img{
     filter: brightness(50%);
 }
 
@@ -91,10 +95,10 @@ body {
     position: absolute;
     width: 100%;
     height: 150px;
-    animation: bajar 0.7s ease-in-out;
-    display: none;
+    display: flex;
     right: 0;
     top: 0;
+    transform: translate(0px , -150px);
 }
 
 .fondo img{
@@ -102,7 +106,7 @@ body {
     width: 100%;
 }
 
-.fondo img:nth-child(2){
+.perfil{
     position: absolute;
     border-radius: 50%;
     height: 100px;
@@ -110,17 +114,18 @@ body {
     border: 2px solid white;
     left: 37%;
     top: 100px;
+    transform: translate(0px , -620px);
     z-index: 1;
 }
 
 .info{
     position: absolute;
     bottom: 1px;
+    transform: translate(0px , 250px);
     width: 100%;
     height: 250px;
     background-color: #EC6565;
-    animation: subir 0.7s ease-in-out;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;    
     align-items: center;
@@ -128,6 +133,7 @@ body {
     bottom: 0;
     color: white;
     font-weight: 600;
+    z-index: 2;
 }
 
 .close{
@@ -141,11 +147,16 @@ body {
     background-color: #EC6565;
     border-radius: 50%;
     text-align: center;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
-    animation: bajar 0.7s ease-in-out;
     cursor: pointer;
+    transform: translate(0px , -150px);
+}
+
+.close:hover{
+    background-color: white;
+    color: #EC6565;
 }
 
 .active{
@@ -184,6 +195,14 @@ body {
     }
 }
 
+@keyframes subir2 {
+    0%{
+        transform: translate(0px , 0px);
+    }
+    100%{
+        transform: translate(0px , 250px);
+    }
+}
 
 @keyframes bajar {
     0%{
@@ -191,5 +210,32 @@ body {
     }
     100%{
         transform: translate(0px , 0px);
+    }
+}
+
+@keyframes bajar2 {
+    0%{
+        transform: translate(0px , 0px);
+    }
+    100%{
+        transform: translate(0px , -150px);
+    }
+}
+
+@keyframes img {
+    0%{
+        transform: translate(0px , -620px);
+    }
+    100%{
+        transform: translate(0px , -150px);
+    }
+}
+
+@keyframes img2 {
+    0%{
+        transform: translate(0px , -150px);
+    }
+    100%{
+        transform: translate(0px , -620px);
     }
 }

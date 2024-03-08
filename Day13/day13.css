@@ -55,28 +55,6 @@ body {
     display: none;
 }
 
-@keyframes zoom {
-    0%{
-        transform: scale(2);
-        opacity: 0;
-    }
-    100%{
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes quitar {
-    0%{
-        transform: scale(1);
-        opacity: 1;
-    }
-    100%{
-        transform: scale(2);
-        opacity: 0;
-    }
-}
-
 .div1 , .div2, .div3, .div4{
     position: relative;
 }
@@ -159,10 +137,6 @@ body {
     color: #EC6565;
 }
 
-.active{
-    display: flex;
-}
-
 .info span {
     font-size: 16px;
 }
@@ -237,5 +211,28 @@ body {
     }
     100%{
         transform: translate(0px , -620px);
+    }
+}
+
+
+@keyframes zoom {
+    0%{
+        transform: scale(2);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes quitar {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(2);
+        opacity: 0;
     }
 }
